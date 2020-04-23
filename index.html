@@ -1,15 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/dist/style.css">
-  <title>Phạm Huỳnh Việt Tú</title>
-</head>
-
-<body class=''>
-
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Phạm Huỳnh Việt Tú</title>
+  </head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .btn-nav:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    #navbar {
+      transition: all 400ms ease-in-out;
+    }
+    .jumptarget:before {
+      height: 9rem;
+      content: "";
+      display: block;
+      margin: -80px 0 0;
+    }
+    .btn-cus {
+      background-color: #ffc30d;
+    }
+  </style>
+  <body class="box-border">
+    <!-- navbar -->
+    <header
+      id="navbar"
+      class="z-30 md:bg-transparent md:py-10 md:text-white py-4 bg-white text-gray-800 shadow-lg sm:py-4 sm:bg-white sm:text-gray-800 sm:shadow-lg align-middle items-center fixed top-0 left-0 w-full"
+    >
+      <div class="container px-4 flex items-center">
+        <div class="float-left">
+          <h2 class="text-2xl font-medium">Pham Tu</h2>
+        </div>
+        <div class="uppercase ml-auto space-x-1 hidden md:block sm:hidden">
+          <a
+            href="#about"
+            class="px-4 py-2 btn-nav rounded bg-transparent transition-colors duration-500"
+            >about</a
+          >
+          <a
+            href="#skills"
+            class="px-4 py-2 btn-nav rounded bg-transparent transition-colors duration-500"
+            >Skills</a
+          >
+          <a
+            href="#education"
+            class="px-4 py-2 btn-nav rounded bg-transparent transition-colors duration-500"
+            >Education</a
+          >
+          <a
+            href="#portfolios"
+            class="px-4 py-2 btn-nav rounded bg-transparent transition-colors duration-500"
+            >Portfolio</a
+          >
+        </div>
+        <button
+          onclick="toggleClass()"
+          id="mobile-navigation-btn"
+          class="block ml-auto md:hidden sm:block rounded px-3 py-2 bg-white border text-gray-800 focus:outline-none border-gray-800 hover:text-purple-500 hover:border-purple-500"
+        >
+          <svg
+            class="fill-current h-3 w-3"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+      <nav
+        id="navigation"
+        class="flex flex-col uppercase container md:hidden h-0 duration-500 ease-in-out h-0 w-full overflow-hidden"
+      >
+        <a
+          href="#about"
+          class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+          >about</a
+        >
+        <a
+          href="#skills"
+          class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+          >Skills</a
+        >
+        <a
+          href="#education"
+          class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+          >Education</a
+        >
+        <a
+          href="#portfolios"
+          class="px-1 py-1 ml-2 btn-nav rounded bg-transparent transition-colors duration-500 hover:text-blue-600 hover:underline"
+          >Portfolio</a
+        >
+      </nav>
+    </header>
+    <!-- about -->
+    <section
+      id="about"
+      style="background-image: url('./image/hero-1.jpg'); height: auto;"
+      class="jumptarget w-full bg-bottom bg-center bg-fixed mt-20"
+    >
+      <div class="flex flex-row gap-4 container px-4 py-4">
+        <div class="md:w-1/2 text-gray-100 mb-8">
+          <h1 class="uppercase text-3xl font-medium">about!</h1>
+          <p>
+            I'm Pham Huynh Viet Tu, iam 3rd-year student of Tra Vinh University.
+            My major is software engineering. I am a calm and flexible person,
+            adapting quickly to a new environment, and would like to face
+            challenges and enjoy working out solutions. I can work alone and be
+            a helpful teammate as well.
+          </p>
+          <p>
+            Short-term: Would like to work and contribute in a dynamic software
+            development company as a internship in Ho Chi Minh city, accumulate
+            more experience, training skills to handle jobs effectively,
+            accurately and quickly.
+          </p>
+          <p>
+            Long-term: Keep doing research and futher education in the long run.
+          </p>
+          <div class="table mt-4">
+            <div class="table-row-group">
+              <div class="table-row">
+                <h5 class="table-cell px-4 py-1 text-sm uppercase">Email</h5>
+                <span class="table-cell px-4 py-1 text-sm"
+                  >shammer280@gmail.com</span
+                >
+              </div>
+              <div class="table-row">
+                <h5 class="table-cell px-4 py-1 text-sm uppercase">Phone</h5>
+                <span class="table-cell px-4 py-1 text-sm">0766905527</span>
+              </div>
+              <div class="table-row">
+                <h5 class="table-cell px-4 py-1 text-sm uppercase">
+                  University
+                </h5>
+                <span class="table-cell px-4 py-1text-sm"
+                  >Tra Vinh University-TVU</span
+                >
+              </div>
+              <div class="table-row">
+                <h5 class="table-cell px-4 py-1 text-sm uppercase">Address</h5>
+                <span class="table-cell px-4 py-1 text-sm"
+                  >90/24 QL53A, Hoa Thuan, Tra Vinh</span
+                >
+              </div>
+              <div class="table-row">
+                <h5 class="table-cell px-4 py-1 text-sm uppercase">Social:</h5>
+                <span class="table-cell px-4 py-1 text-sm">
+                  <span class="flex space-x-2">
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com/481ntwayd/"
+                      class="fa fa-facebook hover:text-blue-400"
+                    ></a>
+                    <a
+                      target="_blank"
+                      href="https://www.instagram.com/ntwayd/"
+                      class="fa fa-instagram hover:text-pink-400"
+                    ></a>
+                    <a
+                      target="_blank"
+                      href="https://github.com/phamtu184"
+                      class="fa fa-github hover:text-gray-500"
+                    ></a>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a
+              href="#"
+              class="hvr-float-shadow uppercase px-6 py-3 rounded-lg text-gray-800 font-medium hover:bg-transparent hover:border-white border-transparent border-2 btn-cus hover:text-white transition-all duration-500"
+            >
+              Download cv
+            </a>
+          </div>
+        </div>
+        <div class="md:block hidden md:w-1/2">
+          <img src="./image/coder.jpeg" class="rounded-lg" />
+        </div>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section
+      id="skills"
+      class="jumptarget px-4 py-4 border-b-2 border-gray-300 pb-16"
+    >
+      <div class="container flex flex-col md:flex-row">
+        <div class="md:w-4/12">
+          <h1 class="uppercase text-3xl font-medium mb-4">Skills.</h1>
+          <figure class="imghvr-push-up">
+            <img src="./image/javascript.svg" alt="js-image" class="w-56" />
+            <figcaption>
+              <p>
+                I am inspired by creating great work with people who are as
+                passionate as I am about building something awesome.
+              </p>
+            </figcaption>
+            <a href="javascript:;"></a>
+          </figure>
+        </div>
+        <div class="md:w-8/12 flex flex-wrap capitalize">
+          <div class="md:w-1/2 pt-4">
+            <h2 class="font-normal text-2xl">
+              Programming Languages
+            </h2>
+            <p class="text-gray-700 mt-2">HTML5, CSS3, Javascript</p>
+          </div>
+          <div class="md:w-1/2 pt-4">
+            <h2 class="font-normal text-2xl">
+              frameworks
+            </h2>
+            <p class="text-gray-700 mt-2">
+              ReactJS, NodeJS, SCSS, Bootstrap 4, TailwindCSS, Jquery
+            </p>
+          </div>
+          <div class="md:w-1/2 md:border-t-2 md:border-gray-200 pt-4">
+            <h2 class="font-normal text-2xl">
+              database management systems
+            </h2>
+            <p class="text-gray-700 mt-2">MongoDB, Mongoose, MySQL</p>
+          </div>
+          <div class="md:w-1/2 md:border-t-2 md:border-gray-200 pt-4">
+            <h2 class="font-normal text-2xl">
+              others
+            </h2>
+            <p class="text-gray-700 mt-2">git, Photoshop,</p>
+            <p class="text-gray-700 normal-case">
+              Willing to learn : React Native, GraphQL, Kotlin
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Education -->
+    <section
+      id="education"
+      class="jumptarget px-4 py-4 border-b-2 border-gray-300 pb-16"
+    >
+      <div class="flex md:flex-row flex-col container">
+        <div class="md:w-1/3 w-full">
+          <h1 class="uppercase text-3xl font-medium mb-4">education.</h1>
+          <p class="font-mono text-green-900 mt-2">// it's up to you...</p>
+          <p class="font-mono">
+            if (youWant()===true) {
+          </p>
+          <p class="font-mono">
+            &nbsp; youCan();
+          </p>
+          <p class="font-mono">
+            } else {youCant();}
+          </p>
+        </div>
+        <div class="md:w-2/3 w-full flex flex-col mt-8">
+          <div class="flex">
+            <img
+              src="./image/learncode.jpg"
+              class="md:w-56 md:h-40 w-48 h-32 rounded-lg transform overflow-hidden duration-500 hover:scale-110 flex-shrink-0"
+            />
+            <div class="ml-6">
+              <h3
+                class="font-bold text-indigo-600 tracking-wide uppercase text-md"
+              >
+                i learn by my self
+              </h3>
+              <h4 class="text-gray-900 capitalize text-lg font-medium">
+                free time
+              </h4>
+              <p class="text-gray-700 mt-2">
+                i have learned a lot of technical skills from courses by mentor
+                in many source like: coders tokyo, codecademy,...
+              </p>
+            </div>
+          </div>
+          <div class="flex mt-8">
+            <img
+              src="./image/tvu.jpg"
+              class="md:w-56 md:h-40 w-48 h-32 rounded-lg transform overflow-hidden duration-500 hover:scale-110 flex-shrink-0"
+            />
+            <div class="ml-6">
+              <h3
+                class="font-bold text-indigo-600 tracking-wide uppercase text-md"
+              >
+                TVU - tra vinh university
+              </h3>
+              <h4 class="text-gray-900 capitalize text-lg font-medium">
+                Sep, 2017-2021
+              </h4>
+              <p class="text-gray-700 mt-2">Major: Software Engineering</p>
+            </div>
+          </div>
+          <div class="flex mt-8">
+            <img
+              src="./image/thptptb.jpg"
+              class="md:w-56 md:h-40 w-48 h-32 rounded-lg transform overflow-hidden duration-500 hover:scale-110 flex-shrink-0"
+            />
+            <div class="ml-6">
+              <h3
+                class="font-bold text-indigo-600 tracking-wide uppercase text-md"
+              >
+                pham thai buong high school - tra vinh
+              </h3>
+              <h4 class="text-gray-900 capitalize text-lg font-medium">
+                2014 - 2017
+              </h4>
+              <p class="text-gray-700 mt-2">My high school :3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="portfolios" class="jumptarget px-4 py-4">
+      <div class="container">
+        <h1 class="uppercase text-3xl font-medium mb-4">portfolios.</h1>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="w-full h-16 bg-indigo-700">
+      <div
+        class="center text-white text-base w-full center text-center transform translate-y-5"
+      >
+        © Phạm Huỳnh Việt Tú 2020
+      </div>
+    </footer>
+  </body>
+  <script src="./src/scripts.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script> -->
 </html>
