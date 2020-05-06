@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "tailwind build src/style.css -o src/stylefinal.css",
-    "build": "postcss src/style.css -o src/stylefinal.css"
+    "build:css": "tailwind build src/stylecus.css -o src/style.css",
+    "build": "postcss src/stylecus.css -o src/style.css"
   },
   "author": "",
   "license": "ISC",

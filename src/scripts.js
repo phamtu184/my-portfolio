@@ -26,3 +26,13 @@ function toggleClass() {
   var navMb = document.getElementById("navigation");
   navMb.classList.toggle("h-32");
 }
+function handleTab(e, tab) {
+  let tabLink = document.getElementsByClassName("tab");
+  for (let i = 0; i < tabLink.length; i++) {
+    tabLink[i].className = tabLink[i].className.replace(
+      " border-indigo-400 border-b-4",
+      ""
+    );
+  }
+  e.currentTarget.className += " border-indigo-400 border-b-4";
+}

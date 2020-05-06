@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/stylefinal.css" />
+    <link rel="stylesheet" href="./src/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -79,7 +79,7 @@
       </div>
       <nav
         id="navigation"
-        class="flex flex-col uppercase container md:hidden h-0 duration-500 ease-in-out h-0 w-full overflow-hidden"
+        class="flex flex-col uppercase container md:hidden duration-500 ease-in-out h-0 w-full overflow-hidden"
       >
         <a
           href="#about"
@@ -323,7 +323,103 @@
     </section>
     <section id="portfolios" class="jumptarget px-4 py-4">
       <div class="container">
-        <h1 class="uppercase text-3xl font-medium mb-4">portfolios.</h1>
+        <h1 class="uppercase text-3xl font-medium">portfolios.</h1>
+        <div class="flex flex-row">
+            <span
+              id="all"
+              class="px-3 py-4 cursor-pointer tab font-semibold text-sm border-indigo-400 border-b-4"
+              data-filter='all'
+              onclick="handleTab(event,'all')"
+              >All</span
+            >
+            <span
+              id="react"
+              class="px-3 py-4 cursor-pointer tab font-semibold text-sm"
+              onclick="handleTab(event,'react')"
+              data-filter='.react'
+              >React</span
+            >
+            <span
+              id="other"
+              class="px-3 py-4 cursor-pointer tab font-semibold text-sm"
+              onclick="handleTab(event,'other')"
+              data-filter='.other'
+              >Other</span
+            >
+        </div>
+        <div class="w-full mt-8 flex flex-wrap mixiconfig">
+          <div class="w-6/12 md:w-3/12 h-64 p-2 mb-5 mix react">
+            <a href="https://github.com/phamtu184/simple-chat-app" target='_blank'>
+            <img
+              src="./image/chatapp.png"
+              class="w-full h-48 object-cover border-t border-l border-r border-gray-400 rounded shadow"
+            />
+            <div
+              class="border-gray-400 border-b border-l border-r rounded-bl rounded-br h-16 shadow p-2"
+            >
+              <h2 class='font-semibold text-lg text-gray-800 truncate'>Simple chat app</h2>
+              <span class='text-gray-600'>1 week</span>
+            </div>
+          </a>
+          </div>
+          <div class="w-6/12 md:w-3/12 h-64 p-2 mb-5 mix react">
+            <a href="https://github.com/phamtu184/practicereact-shopweb" target='_blank'>
+            <img
+              src="./image/shopdog.png"
+              class="w-full h-48 object-cover border-t border-l border-r border-gray-400 rounded shadow"
+            />
+            <div
+              class="border-gray-400 border-b border-l border-r rounded-bl rounded-br h-16 shadow p-2"
+            >
+              <h2 class='font-semibold text-lg text-gray-800 truncate'>Shopping web</h2>
+              <span class='text-gray-600'>3 month</span>
+            </div>
+          </a>
+          </div>
+          <div class="w-6/12 md:w-3/12 h-64 p-2 mb-5 mix other">
+            <a href="https://github.com/phamtu184/convert-imageToText" target='_blank'>
+            <img
+              src="./image/imagetotext.jpg"
+              class="w-full h-48 object-cover border-t border-l border-r border-gray-400 rounded shadow"
+            />
+            <div
+              class="border-gray-400 border-b border-l border-r rounded-bl rounded-br h-16 shadow p-2"
+            >
+              <h2 class='font-semibold text-lg text-gray-800 truncate'>Convert image to text web</h2>
+              <span class='text-gray-600'>1 days</span>
+            </div>
+          </a>
+          </div>
+          <div class="w-6/12 md:w-3/12 h-64 p-2 mb-5 mix react">
+            <a href="https://github.com/phamtu184/todo-app-reactjs" target='_blank'>
+            <img
+              src="./image/todoapp.png"
+              class="w-full h-48 object-cover border-t border-l border-r border-gray-400 rounded shadow"
+            />
+            <div
+              class="border-gray-400 border-b border-l border-r rounded-bl rounded-br h-16 shadow p-2"
+            >
+              <h2 class='font-semibold text-lg text-gray-800 truncate'>Simple to do app practice react</h2>
+              <span class='text-gray-600'>3 days</span>
+            </div>
+          </a>
+          </div>
+          <div class="w-6/12 md:w-3/12 h-64 p-2 mb-5 mix other">
+            <a href="https://github.com/phamtu184/ql-dcct-mysql" target='_blank'>
+            <img
+              src="./image/managefiles.png"
+              class="w-full h-48 object-cover border-t border-l border-r border-gray-400 rounded shadow"
+            />
+            <div
+              class="border-gray-400 border-b border-l border-r rounded-bl rounded-br h-16 shadow p-2"
+            >
+              <h2 class='font-semibold text-lg text-gray-800 truncate'>Manage files practice nodejs</h2>
+              <span class='text-gray-600'>3 month</span>
+            </div>
+          </a>
+          </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- footer -->
@@ -336,5 +432,9 @@
     </footer>
   </body>
   <script src="./src/scripts.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script> -->
+  <script src="./src/mixitup.min.js"></script>
+  <script>
+    var config = document.querySelector(".mixiconfig");
+    var mixer = mixitup(config);
+  </script>
 </html>
